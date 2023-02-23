@@ -1,26 +1,28 @@
-# Using virtualenv
+# Generate requirements.txt
+"pip freeze > requirements.txt"
 
-## Install with pip:
+/*** Using virtualenv ***/
+# Install with pip:
 "pip install virtualenv"
 
-## Create virtual environment  
+# Create virtual environment  
 "virtualenv env_name"
 
-## Activate virtual environment
+# Activate virtual environment
 "./env_name/Scripts/activate" 
 
-## Deactivate virtual environment
+# Deactivate virtual environment
 "./env_name/Scripts/deactivate" 
 
-# Using Django
+/*** Using Django ***/
 
-## Show all available sub-commands
+# Show all available sub-commands
 "django-admin"
 
-## Create Django Project (creates boiler plate files)
+# Create Django Project (creates boiler plate files)
 "django-admin startproject project_name"
 
+# Start Django server locally
 "cd project_name"
-
 "python manage.py runserver"
 

@@ -1,8 +1,11 @@
-# Generate requirements.txt
+/*** General ***/
+
+# Generate requirements.txt file
 "pip freeze > requirements.txt"
 
 /*** Using virtualenv ***/
-# Install with pip:
+
+# Install:
 "pip install virtualenv"
 
 # Create virtual environment  
@@ -29,3 +32,15 @@
 # Create new app inside current project
 "python manage.py startapp app_name"
 
+# Prepare migrations (run every time new model is added)
+"python manage.py makemigrations"
+
+# Make/Run migrations (creates tables in database)
+"python manage.py migrate"
+
+/*** Django Admin panel ***/
+
+Go to: URL/admin
+
+# Create super user
+"python manage.py createsuperuser"

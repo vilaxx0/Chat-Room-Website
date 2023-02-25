@@ -1,6 +1,6 @@
 # ChatRooms
 
-The project is a web application that enables users to join chat rooms with different topics and discuss these topics with other users. The application was built using Django, Django Template Engine, and sqlite3.
+The project is a web-based chat application that enables users to join chat rooms based on different topics. The application is built using Django framework and features live chat functionality that allows users to discuss the selected topic in real-time. The front-end of the application is created using Django built-in Template Engine, while sqlite3 is used as the database. With this project, users can connect with like-minded individuals and share their ideas, opinions, and knowledge on various topics.
 
 ## Prerequisites
 

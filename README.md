@@ -61,7 +61,28 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-8. Open the web browser and go to [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+> ⚠ Then, the development server will be started at http://127.0.0.1:8000/
+
+### App Preview :
+
+<table width="100%"> 
+<tr>
+<td width="50%">      
+&nbsp; 
+<br>
+<p align="center">
+  Feed Home
+</p>
+<img src="">
+</td> 
+<td width="50%">
+<br>
+<p align="center">
+  Room Conversation Preview
+</p>
+<img src="">  
+</td>
+</table>
 
 ## Contributing
 

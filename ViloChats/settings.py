@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-gb!y76rxr0oxvg%pubck8rk*xw50*_oz^1$4n=+h9$@pb+sr(n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# All allowed URL's (Added for vercel hosting)
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
+# All allowed URL's
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'vilo-chats.herokuapp.com', 'vilo-chats.vercel.app']
 
 
 # Application definition
@@ -89,6 +89,9 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
+AUTH_USER_MODEL = 'base.User'
 
 
 # Password validation

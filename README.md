@@ -67,13 +67,15 @@ python manage.py runserver
 
 API was built using Django REST framework module.
 
-All available URL's:
+All available URL Endpoints:
 
     'GET /api/'
 
     'GET /api/rooms/'
 
     'GET /api/rooms/[str:pk](str:pk)/'
+
+URL Endpoints to implement:
 
     'POST /api/rooms/create/'
 
@@ -87,13 +89,13 @@ All available URL's:
 
     'DELETE /api/rooms/[str:pk](str:pk)/messages/[str:pk](str:pk)/delete/'
 
-    'GET /api/rooms/[str:pk](str:pk)/participants/',
+    'GET /api/rooms/[str:pk](str:pk)/participants/'
 
 ### App Preview :
 
 <table width="100%"> 
 <tr>
-<td width="50%">    
+<td width="50%">  
   
 <br>
 <p align="center">

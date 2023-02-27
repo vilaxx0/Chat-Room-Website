@@ -1,8 +1,6 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-
-from django.contrib.auth.models import User
-from base.models import Room, Topic, Message
+from base.models import Room, Topic, Message, User
 
 from .serializers import RoomsSerializer
 
@@ -12,7 +10,7 @@ from .serializers import RoomsSerializer
 def getRoutes(request):
     routes = [
         'GET /api/',
-        
+
         'GET /api/rooms/',
         'GET /api/rooms/<str:pk>/',
         'POST /api/rooms/create/',

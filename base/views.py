@@ -68,7 +68,7 @@ def home(request):
     )
     topics = Topic.objects.all()[:4]
 
-    room_messages = Message.objects.filter(Q(room__topic__name__icontains=q))[:5]
+    room_messages = Message.objects.filter(Q(room__topic__name__icontains=q))[:4]
     all_rooms_count = Room.objects.all().count()
 
     context = {'rooms': rooms, 'topics': topics, 'room_messages': room_messages, 'all_rooms': all_rooms_count}
@@ -95,7 +95,7 @@ def room(request, pk):
 def userProfile(request, pk):
     user = User.objects.get(id=pk)
     rooms = user.room_set.all()
-    room_messages = user.message_set.all()
+    room_messages = user.message_set.all()[0:4]
     topics = Topic.objects.all()[:4]
     all_rooms_count = Room.objects.all().count()
 
@@ -185,3 +185,20 @@ def deleteMessage(request, pk):
 
     context = {'obj': message}
     return render(request, 'delete.html', context)
+
+def topicsPage(request):
+    q = None
+    if(request.GET.get('q') != None):
+        q = request.GET.get('q')
+    else:
+        q = ''
+
+    topics = Topic.objects.filter(Q(name__icontains=q))
+    all_rooms_count = Room.objects.all().count()
+    context = {'topics': topics, 'all_rooms': all_rooms_count}
+    return render(request, 'base/topics.html', context) 
+
+def activitiesPage(request):
+    room_messages = Message.objects.all()[:4]
+    context = {'room_messages': room_messages}
+    return render(request, 'base/activity.html', context)

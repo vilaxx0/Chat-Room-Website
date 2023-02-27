@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.db.models import Q
 from .models import Room, Topic, Message
-from .forms import RoomForm
+from .forms import RoomForm, UserForm
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
@@ -30,7 +30,7 @@ def loginPage(request):
             messages.error(request, 'Username OR Password is incorrect!')
 
     context = {'page': 'login'}
-    return render(request, 'base/login_register.html', context)
+    return render(request, 'login_register.html', context)
 
 def logoutUser(request):
     logout(request)
@@ -51,7 +51,7 @@ def registerPage(request):
             messages.error(request, 'ERROR: ocurred during registration!')
 
     context = {'form':form}
-    return render(request, 'base/login_register.html', context)
+    return render(request, 'login_register.html', context)
 
 def home(request):
     q = None
@@ -63,14 +63,15 @@ def home(request):
     rooms = Room.objects.filter(
         Q(topic__name__icontains=q) | 
         Q(name__icontains=q) |
-        Q(description__icontains=q) |
+        # Q(description__icontains=q) |
         Q(host__username__icontains=q)
     )
-    topics = Topic.objects.all()
+    topics = Topic.objects.all()[:4]
 
     room_messages = Message.objects.filter(Q(room__topic__name__icontains=q))[:5]
+    all_rooms_count = Room.objects.all().count()
 
-    context = {'rooms': rooms, 'topics': topics, 'room_messages': room_messages}
+    context = {'rooms': rooms, 'topics': topics, 'room_messages': room_messages, 'all_rooms': all_rooms_count}
     return render(request, 'base/home.html', context)
 
 def room(request, pk):
@@ -95,9 +96,25 @@ def userProfile(request, pk):
     user = User.objects.get(id=pk)
     rooms = user.room_set.all()
     room_messages = user.message_set.all()
-    topics = Topic.objects.all()
-    context = {'user': user, 'rooms': rooms, 'room_messages': room_messages, 'topics': topics }
+    topics = Topic.objects.all()[:4]
+    all_rooms_count = Room.objects.all().count()
+
+    context = {'user': user, 'rooms': rooms, 'room_messages': room_messages, 'topics': topics, 'all_rooms': all_rooms_count }
     return render(request, 'base/profile.html', context)
+
+@login_required(login_url='login')
+def editProfile(request):
+    user = request.user
+    form = UserForm(instance=user)
+
+    if(request.method == 'POST'):
+        form = UserForm(request.POST, instance=user)
+        if(form.is_valid()):
+            form.save()
+            return redirect('profile', pk=user.id)
+
+    context = {'form': form }
+    return render(request, 'base/profile_edit.html', context)
 
 @login_required(login_url='login')
 def createRoom(request):
@@ -117,7 +134,7 @@ def createRoom(request):
 
     topics = Topic.objects.all()
     context = {'form':form, 'topics': topics}
-    return render(request, 'base/room_form.html', context)
+    return render(request, 'base/room_create_update.html', context)
 
 @login_required(login_url='login')
 def updateRoom(request, pk):
@@ -139,7 +156,7 @@ def updateRoom(request, pk):
         
     topics = Topic.objects.all()  
     context = {'update': True, 'form': form, 'topics': topics, 'room': room }
-    return render(request, 'base/room_form.html', context)
+    return render(request, 'base/room_create_update.html', context)
 
 @login_required(login_url='login')
 def deleteRoom(request, pk):

@@ -334,6 +334,12 @@ a {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .header__search {
+    display: none;
+  }
+}
+
 .header__menu {
   margin-left: auto;
   position: relative;
@@ -981,7 +987,6 @@ a {
   padding-left: 2rem;
   padding-right: 2rem;
   height: 80.5vh;
-  /* overflow-y: auto; */
   padding-bottom: 0;
 }
 

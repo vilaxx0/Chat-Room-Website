@@ -63,12 +63,38 @@ python manage.py runserver
 
 > ⚠ Then, the development server will be started at http://127.0.0.1:8000/
 
+### API
+
+API was built using Django REST framework module.
+
+All available URL's:
+
+    'GET /api/'
+
+    'GET /api/rooms/'
+
+    'GET /api/rooms/[str:pk](str:pk)/'
+
+    'POST /api/rooms/create/'
+
+    'POST /api/rooms/[str:pk](str:pk)/update/'
+
+    'DELETE /api/rooms/[str:pk](str:pk)/delete/'
+
+    'GET /api/rooms/[str:pk](str:pk)/messages/'
+
+    'POST /api/rooms/[str:pk](str:pk)/messages/create/'
+
+    'DELETE /api/rooms/[str:pk](str:pk)/messages/[str:pk](str:pk)/delete/'
+
+    'GET /api/rooms/[str:pk](str:pk)/participants/',
+
 ### App Preview :
 
 <table width="100%"> 
 <tr>
-<td width="50%">      
-&nbsp; 
+<td width="50%">    
+  
 <br>
 <p align="center">
   Feed Home

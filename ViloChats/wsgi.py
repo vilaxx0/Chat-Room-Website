@@ -1,5 +1,5 @@
 """
-WSGI config for viloChatRoom project.
+WSGI config for ViloChats project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,7 +11,7 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'viloChatRoom.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ViloChats.settings')
 
 application = get_wsgi_application()
 

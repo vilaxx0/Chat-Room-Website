@@ -112,7 +112,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
@@ -124,15 +123,17 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
+STATIC_URL = '/static/'
 
-STATIC_URL = 'static/'
+MEDIA_URL = '/assets/'
 
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
+
+MEDIA_ROOT = BASE_DIR / 'static/assets/'
 
 # STATIC_ROOT = 
 
@@ -142,5 +143,5 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # CORS Settings
-# Description: https://pypi.org/project/django-cors-headers/
+# Documentation: https://pypi.org/project/django-cors-headers/
 CORS_ORIGIN_ALLOW_ALL = True

@@ -70,9 +70,9 @@ API was built using Django REST framework module.
 | Method               | URL                             | Description                                                     |
 | -------------------- | ------------------------------- | --------------------------------------------------------------- |
 | `GET`                | `/api/`                         | Shows all routes in the API                                     |
-| `GET` `POST`         | `/api/topics/`                  | Shows all topics <br />Creates a new topic                         |
-| `GET` `POST`         | `/api/rooms/`                   | Shows all rooms <br />Creates a new room                           |
-| `GET` `PUT` `DELETE` | `/api/rooms/<id>/`              | Shows a specific room <br />Updates a room <br />Deletes a room by id |
+| `GET` <br />`POST`         | `/api/topics/`                  | Shows all topics <br />Creates a new topic                         |
+| `GET` <br />`POST`         | `/api/rooms/`                   | Shows all rooms <br />Creates a new room                           |
+| `GET` <br />`PUT` <br />`DELETE` | `/api/rooms/<id>/`              | Shows a specific room <br />Updates a room <br />Deletes a room by id |
 | `GET`                | `/api/rooms/<id>/participants/` | Shows all participants in a room by id                          |
 | `GET`                | `/api/rooms/<id>/messages/`     | Shows all messages in a room by id                              |
 

@@ -91,26 +91,16 @@ URL Endpoints to implement:
 
     'GET /api/rooms/[str:pk](str:pk)/participants/'
 
-### App Preview :
+### App Preview Desktop/Mobile View :
 
-<table width="100%"> 
-<tr>
-<td width="50%">  
-  
-<br>
-<p align="center">
-  Feed Home
-</p>
-<img src="">
-</td> 
-<td width="50%">
-<br>
-<p align="center">
-  Room Conversation Preview
-</p>
-<img src="">  
-</td>
-</table>
+<div style="display:flex; flex-direction: row; padding: 10px;">
+  <img src="./static/assets/screenshots/1.png" />
+  <img src="./static/assets/screenshots/2.png" width="250" />
+  <img src="./static/assets/screenshots/3.png" />
+  <img src="./static/assets/screenshots/4.png" width="250" />
+  <img src="./static/assets/screenshots/5.png" />
+  <img src="./static/assets/screenshots/6.png" width="250" />
+</div>
 
 ## Contributing
 

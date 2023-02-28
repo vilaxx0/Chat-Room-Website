@@ -82,9 +82,9 @@ API was built using Django REST framework module.
   <img src="./static/assets/screenshots/1.png" />
   <img src="./static/assets/screenshots/3.png" />
   <img src="./static/assets/screenshots/5.png" />
-  <img src="./static/assets/screenshots/2.png" width="270" />
-  <img src="./static/assets/screenshots/4.png" width="290" />
-  <img src="./static/assets/screenshots/6.png" width="270" />
+  <img src="./static/assets/screenshots/2.png" width="260" />
+  <img src="./static/assets/screenshots/4.png" width="280" />
+  <img src="./static/assets/screenshots/6.png" width="260" />
 </div>
 
 ## Contributing

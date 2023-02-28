@@ -3,6 +3,9 @@ from . import views
 
 urlpatterns = [
     path('', views.getRoutes),
-    path('rooms/', views.getRooms),
-    path('rooms/<str:pk>/', views.getRoom),
+    path('topics/', views.getCreateTopics),
+    path('rooms/', views.getCreateRooms),
+    path('rooms/<int:pk>/', views.getUpdateDeleteRoom),
+    path('rooms/<int:pk>/participants/', views.getParticipants),
+    path('rooms/<int:pk>/messages/', views.getMessages),
 ]

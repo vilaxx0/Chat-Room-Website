@@ -67,29 +67,14 @@ python manage.py runserver
 
 API was built using Django REST framework module.
 
-All available URL Endpoints:
-
-    'GET /api/'
-
-    'GET /api/rooms/'
-
-    'GET /api/rooms/[str:pk](str:pk)/'
-
-URL Endpoints to implement:
-
-    'POST /api/rooms/create/'
-
-    'POST /api/rooms/[str:pk](str:pk)/update/'
-
-    'DELETE /api/rooms/[str:pk](str:pk)/delete/'
-
-    'GET /api/rooms/[str:pk](str:pk)/messages/'
-
-    'POST /api/rooms/[str:pk](str:pk)/messages/create/'
-
-    'DELETE /api/rooms/[str:pk](str:pk)/messages/[str:pk](str:pk)/delete/'
-
-    'GET /api/rooms/[str:pk](str:pk)/participants/'
+| Method               | URL                             | Description                                                     |
+| -------------------- | ------------------------------- | --------------------------------------------------------------- |
+| `GET`                | `/api/`                         | Shows all routes in the API                                     |
+| `GET` `POST`         | `/api/topics/`                  | Shows all topics OR Creates a new topic                         |
+| `GET` `POST`         | `/api/rooms/`                   | Shows all rooms OR Creates a new room                           |
+| `GET` `PUT` `DELETE` | `/api/rooms/<id>/`              | Shows a specific room OR Updates a room OR Deletes a room by id |
+| `GET`                | `/api/rooms/<id>/participants/` | Shows all participants in a room by id                          |
+| `GET`                | `/api/rooms/<id>/messages/`     | Shows all messages in a room by id                              |
 
 ### App Preview in Desktop & Mobile View :
 

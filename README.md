@@ -70,9 +70,9 @@ API was built using Django REST framework module.
 | Method               | URL                             | Description                                                     |
 | -------------------- | ------------------------------- | --------------------------------------------------------------- |
 | `GET`                | `/api/`                         | Shows all routes in the API                                     |
-| `GET` `POST`         | `/api/topics/`                  | Shows all topics OR Creates a new topic                         |
-| `GET` `POST`         | `/api/rooms/`                   | Shows all rooms OR Creates a new room                           |
-| `GET` `PUT` `DELETE` | `/api/rooms/<id>/`              | Shows a specific room OR Updates a room OR Deletes a room by id |
+| `GET` `POST`         | `/api/topics/`                  | Shows all topics <br />Creates a new topic                         |
+| `GET` `POST`         | `/api/rooms/`                   | Shows all rooms <br />Creates a new room                           |
+| `GET` `PUT` `DELETE` | `/api/rooms/<id>/`              | Shows a specific room <br />Updates a room <br />Deletes a room by id |
 | `GET`                | `/api/rooms/<id>/participants/` | Shows all participants in a room by id                          |
 | `GET`                | `/api/rooms/<id>/messages/`     | Shows all messages in a room by id                              |
 
@@ -95,7 +95,7 @@ If you want to contribute to this project, please follow these steps:
 2. Clone the dev branch of the repository:
 
 ```bash
-git clone -b dev https://github.com/vilaxx0/Chat-Rooms.git
+git clone -b dev https://github.com/vilaxx0/vilo-chats.git
 ```
 
 3. Create a new branch with a descriptive name:

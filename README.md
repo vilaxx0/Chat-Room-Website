@@ -91,7 +91,7 @@ URL Endpoints to implement:
 
     'GET /api/rooms/[str:pk](str:pk)/participants/'
 
-### App Preview Desktop/Mobile View :
+### App Preview in Desktop & Mobile View :
 
 <div style="display:flex; flex-direction: row; padding: 10px;">
   <img src="./static/assets/screenshots/1.png" />

@@ -97,11 +97,9 @@ URL Endpoints to implement:
   <img src="./static/assets/screenshots/1.png" />
   <img src="./static/assets/screenshots/3.png" />
   <img src="./static/assets/screenshots/5.png" />
-  <img src="./static/assets/screenshots/2.png" />
-  
-  <img src="./static/assets/screenshots/4.png" />
-  
-  <img src="./static/assets/screenshots/6.png" />
+  <img src="./static/assets/screenshots/2.png" width="250" />
+  <img src="./static/assets/screenshots/4.png" width="250" />
+  <img src="./static/assets/screenshots/6.png" width="250" />
 </div>
 
 ## Contributing

@@ -95,11 +95,11 @@ URL Endpoints to implement:
 
 <div style="display:flex; flex-direction: row; padding: 10px;">
   <img src="./static/assets/screenshots/1.png" />
-  <img src="./static/assets/screenshots/2.png" width="250" />
   <img src="./static/assets/screenshots/3.png" />
-  <img src="./static/assets/screenshots/4.png" width="250" />
   <img src="./static/assets/screenshots/5.png" />
-  <img src="./static/assets/screenshots/6.png" width="250" />
+  <img src="./static/assets/screenshots/2.png" width="270" />
+  <img src="./static/assets/screenshots/4.png" width="290" />
+  <img src="./static/assets/screenshots/6.png" width="270" />
 </div>
 
 ## Contributing
